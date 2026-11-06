@@ -68,7 +68,7 @@ export const CommunityTabContent = forwardRef(function(props: CommunityTabConten
           <ul className="link-list" style={{marginTop: '10px'}}>
             <li><i className="fa-brands fa-github" />&nbsp;<a href="https://github.com/KobaltBlu/KotOR.js" target="_new">KotOR.js GitHub</a></li>
             <li>|</li>
-            <li><i className="fa-solid fa-globe" />&nbsp;<a href="https://swkotor.net" target="_new">SWKotOR.net</a></li>
+            <li><i className="fa-solid fa-globe" />&nbsp;<a href="https://swkotor.org" target="_new">swkotor.org</a></li>
             <li>|</li>
             <li><i className="fa-brands fa-youtube" />&nbsp;<a href="https://www.youtube.com/@KotORjs" target="_new">YouTube Channel</a></li>
             <li>|</li>

@@ -2,72 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Star Wars: Knights of the Old Republic — KotOR.js Browser</title>
-    <meta name="description" content="Play Star Wars: Knights of the Old Republic in your browser with KotOR.js, an independent open-source Odyssey Engine reimplementation. Requires your own legally obtained PC game files; none are included with this project. Not affiliated with Lucasfilm, Disney, BioWare, Obsidian, EA, Steam, or GOG.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://play.swkotor.net/game/?key=kotor">
+    <title>Star Wars: Knights of the Old Republic — Work in progress</title>
+    <meta name="robots" content="noindex, nofollow">
     <link rel="shortcut icon" href="favicon.ico">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="KotOR.js">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Star Wars: Knights of the Old Republic — KotOR.js Browser">
-    <meta property="og:description" content="Play Star Wars: Knights of the Old Republic in your browser with KotOR.js, an independent open-source Odyssey Engine reimplementation. Requires your own legally obtained PC game files; none are included with this project. Not affiliated with Lucasfilm, Disney, BioWare, Obsidian, EA, Steam, or GOG.">
-    <meta property="og:url" content="https://play.swkotor.net/game/?key=kotor">
-    <meta property="og:image" content="https://steamcdn-a.akamaihd.net/steam/apps/32370/logo.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Star Wars: Knights of the Old Republic — KotOR.js Browser">
-    <meta name="twitter:description" content="Play Star Wars: Knights of the Old Republic in your browser with KotOR.js, an independent open-source Odyssey Engine reimplementation. Requires your own legally obtained PC game files; none are included with this project. Not affiliated with Lucasfilm, Disney, BioWare, Obsidian, EA, Steam, or GOG.">
-    <meta name="twitter:image" content="https://steamcdn-a.akamaihd.net/steam/apps/32370/logo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Star Wars: Knights of the Old Republic (KotOR.js)",
-      "applicationCategory": "GameApplication",
-      "operatingSystem": "Web browser",
-      "url": "https://play.swkotor.net/game/?key=kotor",
-      "description": "Play Star Wars: Knights of the Old Republic in your browser with KotOR.js, an independent open-source Odyssey Engine reimplementation. Requires your own legally obtained PC game files; none are included with this project. Not affiliated with Lucasfilm, Disney, BioWare, Obsidian, EA, Steam, or GOG.",
-      "image": "https://steamcdn-a.akamaihd.net/steam/apps/32370/logo.png",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "isAccessibleForFree": true,
-      "license": "https://www.gnu.org/licenses/gpl-3.0.html"
-    }
-    </script>
 
     <style>
       html, body {
-        background: #212121;
-        overflow: hidden;
+        height: 100%;
         margin: 0;
+        background: #212121;
+        font-family: "Roboto", sans-serif;
+        color: #ccc;
       }
 
-      .page-pre-loader {
+      body {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 12px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 99999999999999;
-        background: rgba(0, 0, 0, 0.6) !important;
-        font-family: "Roboto", sans-serif !important;
-        color: #ccc !important;
       }
 
-      .page-pre-loader .pre-loader-card {
+      .card {
         min-width: 280px;
         max-width: 420px;
         padding: 20px 24px;
@@ -78,71 +33,30 @@
         text-align: center;
       }
 
-      .page-pre-loader h1 {
-        margin: 0 0 6px !important;
-        font-weight: 600 !important;
-        line-height: 1.2 !important;
-        font-size: 1.35rem !important;
-        color: #c9dde6 !important;
-      }
-
-      .page-pre-loader p {
-        margin: 0 !important;
-        font-size: 0.9rem !important;
-        color: #9d9d9d !important;
-      }
-
-      .page-pre-loader .loading-accent {
-        width: 120px;
-        height: 3px;
-        border-radius: 999px;
-        margin: 10px auto 0;
-        background: linear-gradient(90deg, #0c3d5a 0%, #337ab7 50%, #0c3d5a 100%);
-        animation: loading-accent 1.5s ease-in-out infinite;
-      }
-
-      .seo-fallback {
-        max-width: 720px;
-        margin: 2rem auto;
-        padding: 0 1.5rem;
-        line-height: 1.5;
-        font-family: sans-serif;
-        color: #ccc;
-      }
-
-      .seo-fallback a {
+      h1 {
+        margin: 0 0 6px;
+        font-weight: 600;
+        line-height: 1.2;
+        font-size: 1.35rem;
         color: #c9dde6;
       }
 
-      @keyframes loading-accent {
-        0% { opacity: 0.45; transform: scaleX(0.9); }
-        50% { opacity: 1; transform: scaleX(1); }
-        100% { opacity: 0.45; transform: scaleX(0.9); }
+      p {
+        margin: 0 0 8px;
+        font-size: 0.9rem;
+        color: #9d9d9d;
+      }
+
+      a {
+        color: #c9dde6;
       }
     </style>
   </head>
   <body>
-    <noscript>
-      <main class="seo-fallback">
-        <h1>Star Wars: Knights of the Old Republic</h1>
-        <p>Play Star Wars: Knights of the Old Republic in your browser with KotOR.js, an independent open-source Odyssey Engine reimplementation. Use your own legally obtained PC game files; none are distributed with this project.</p>
-        <p>Also available: <a href="?key=tsl">KotOR II: The Sith Lords</a>.</p>
-        <p><small>Independent fan project. Not affiliated with Lucasfilm, Disney, BioWare, Obsidian, EA, Steam, or GOG.</small></p>
-      </main>
-    </noscript>
-    <div class="viewport-wrapper">
-      <div id="renderer-container"></div>
-      <div id="root">
-        <div class="page-pre-loader">
-          <div class="pre-loader-card">
-            <h1>Initializing...</h1>
-            <p>Loading engine libraries</p>
-            <div class="loading-accent"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="../three.min.js"></script>
-    <script type="text/javascript" src="../KotOR.js"></script>
+    <main class="card">
+      <h1>🚧 Work in progress 🚧</h1>
+      <p>The game client is not available yet.</p>
+      <p><a href="../launcher/">Back to the launcher</a></p>
+    </main>
   </body>
 </html>

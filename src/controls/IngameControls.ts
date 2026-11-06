@@ -91,13 +91,6 @@ export class IngameControls {
 
     window.addEventListener('keyup', (e: KeyboardEvent) => {
       /**
-       * Debugger Hotkey
-       */
-      if(e.key == 'D' && e.ctrlKey && e.shiftKey){
-        GameState.Debugger.open();
-      }
-
-      /**
        * Generate a TGA Screenshot of the Game canvas and export it to the game directory
        */
       if(e.key == 'PrintScreen'){

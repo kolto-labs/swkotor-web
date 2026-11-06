@@ -33,9 +33,6 @@ const scssRule = {
       loader: 'sass-loader',
       options: {
         sourceMap: !isProd,
-        sassOptions: {
-          loadPaths: [path.join(srcPath, 'apps/forge/styles')],
-        },
       }
     }
   ]

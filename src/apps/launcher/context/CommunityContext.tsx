@@ -41,7 +41,7 @@ export const CommunityProvider = (props: any) => {
 
 
   useEffect(() => {
-    fetch(`https://swkotor.net/api/media/youtube/latest`).then( (res) => {
+    fetch(`https://swkotor.org/api/media/youtube/latest`).then( (res) => {
       if(res.ok){
         return res.json();
       }

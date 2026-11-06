@@ -73,36 +73,10 @@ export class Debugger {
   }
 
   /**
-   * Opens the debugger window.
+   * Opens the debugger window (no-op: debugger tool removed).
    */
   static open() {
-    if(this.window) { 
-      this.window.focus();
-      return;
-    }
-
-    this.window = window.open(`../debugger/index.html?uuid=${this.uuid}`, '_blank', 'width=1600,height=1200');
-    if(this.window) {
-      console.log(`Debugger window opened: ${this.uuid}`);
-      this.broadcastChannel = new BroadcastChannel(`debugger-${this.uuid}`);
-      this.broadcastChannel.onmessage = (event: MessageEvent) => {
-        if(typeof event.data == 'string') {
-          if(event.data == 'close') {
-            Debugger.close();
-          }
-          return;
-        }
-        
-        if(event.data?.constructor == Uint8Array){
-          const msg = IPCMessage.fromBuffer(event.data);
-          this.dispatchEvent('message', msg);
-        }
-      };
-      this.window.addEventListener('close', () => {
-        console.log(`Debugger window closed: ${this.uuid}`);
-      });
-      this.dispatchEvent('open');
-    }
+    // Debugger tool has been removed.
   }
 
   /**

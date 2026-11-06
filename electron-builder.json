@@ -3,7 +3,7 @@
     "directories": {
       "output": "release/"
     },
-    "appId": "com.kotor.js",
+    "appId": "com.swkotor.web",
     "files": [
       "**/*",
       "!**/*.ts",

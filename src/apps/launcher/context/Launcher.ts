@@ -1,7 +1,6 @@
 
 import * as swKotOR from "@/apps/launcher/profiles/kotor";
 import * as swKotOR2 from "@/apps/launcher/profiles/tsl";
-import * as swForge from "@/apps/launcher/profiles/forge";
 import { ConfigClient } from "@/utility/ConfigClient";
 
 export class Launcher {
@@ -13,7 +12,6 @@ export class Launcher {
 
   static AppCategories: any = {
     game: { name: 'Games', profiles: [] },
-    tools: { name: 'Modding Tools', profiles: [] }
   };
   static AppProfiles: any = {};
 
@@ -24,18 +22,16 @@ export class Launcher {
     Launcher.AppProfiles = {
       kotor: swKotOR.LauncherConfig,
       tsl: swKotOR2.LauncherConfig,
-      forge: swForge.LauncherConfig,
     };
     Launcher.AppProfiles.kotor.key = 'kotor';
     Launcher.AppProfiles.tsl.key = 'tsl';
-    Launcher.AppProfiles.forge.key = 'forge';
 
     Launcher.ensureGameProfileSlots();
     Launcher.populateAppCategories();
   }
 
   /**
-   * Restore kotor/tsl/forge profile slots if a failed ConfigClient.set parked a
+   * Restore kotor/tsl profile slots if a failed ConfigClient.set parked a
    * directory handle on Profiles.directory_handle and dropped the game keys.
    */
   static ensureGameProfileSlots(){
@@ -47,10 +43,6 @@ export class Launcher {
       Launcher.AppProfiles.tsl = swKotOR2.LauncherConfig;
       Launcher.AppProfiles.tsl.key = 'tsl';
     }
-    if(!Launcher.AppProfiles.forge){
-      Launcher.AppProfiles.forge = swForge.LauncherConfig;
-      Launcher.AppProfiles.forge.key = 'forge';
-    }
 
     let profilesRoot = ConfigClient.get(['Profiles']);
     if(typeof profilesRoot !== 'object' || profilesRoot == null || Array.isArray(profilesRoot)){
@@ -59,11 +51,10 @@ export class Launcher {
     }
 
     const strayHandle = profilesRoot.directory_handle;
-    if(typeof profilesRoot.kotor === 'undefined' || typeof profilesRoot.tsl === 'undefined' || typeof profilesRoot.forge === 'undefined'){
+    if(typeof profilesRoot.kotor === 'undefined' || typeof profilesRoot.tsl === 'undefined'){
       const repaired: any = {};
       if(profilesRoot.kotor) repaired.kotor = profilesRoot.kotor;
       if(profilesRoot.tsl) repaired.tsl = profilesRoot.tsl;
-      if(profilesRoot.forge) repaired.forge = profilesRoot.forge;
       ConfigClient.set('Profiles', repaired);
     }
 

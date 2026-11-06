@@ -48,7 +48,7 @@ module.exports = (name, color) => ({
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=/launcher/">
-  <title>KotOR.js - Redirecting...</title>
+  <title>swkotor-web - Redirecting...</title>
   <script>
     window.location.href = '/launcher/';
   </script>

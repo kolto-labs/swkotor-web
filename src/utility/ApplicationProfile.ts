@@ -26,7 +26,7 @@ export class ApplicationProfile {
   static isMac: boolean = false;
 
   /**
-   * Map a launcher/Forge profile onto {@link GameEngineType}.
+   * Map a launcher profile onto {@link GameEngineType}.
    * TSL is `key === 'tsl'` or the game app's `launch.args.gameChoice === 2`.
    */
   static resolveGameKey(profile: { key?: string; launch?: { args?: { gameChoice?: number | string } } } | null | undefined): GameEngineType {

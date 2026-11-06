@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://play.swkotor.net/launcher/sitemap.xml
+Sitemap: https://play.swkotor.org/launcher/sitemap.xml

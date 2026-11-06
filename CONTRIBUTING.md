@@ -1,8 +1,8 @@
-# Contributing to KotOR.js
+# Contributing to swkotor-web
 
-KotOR.js is a browser-based reimplementation of the Odyssey engine used in *Star Wars: Knights of the Old Republic*. The goal is to build a stable, accurate, and usable engine—but this is first and foremost a passion project.
+swkotor-web is a fork of the [KotOR.js](https://github.com/KobaltBlu/KotOR.js) web launcher for *Star Wars: Knights of the Old Republic*. It is a work in progress: the in-browser game client has been removed and the game is not playable from this repository yet.
 
-We are very open to contributions.
+Contributions to the launcher are welcome.
 
 If you have an idea, question, or want to get involved, you can:
 - Open a PR or Issue directly on GitHub  

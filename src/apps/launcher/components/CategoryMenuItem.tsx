@@ -7,6 +7,9 @@ export interface CategoryMenuItemProps {
 
 export const CategoryMenuItem = function(props: CategoryMenuItemProps){
   const category: any = props.category;
+  if (!category?.profiles?.length) {
+    return null;
+  }
   return (
     <>
       <h3>{category.name}</h3>

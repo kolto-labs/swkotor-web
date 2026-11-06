@@ -7,13 +7,11 @@
         "src/*"
       ]
     }
+    // "noResolve": true
   },
   "extends": "./tsconfig.json",
   "include": [
     "src/index.d.ts"
   ],
-  "compilerOptions": {
-    // "noResolve": true
-  },
   "skipLibCheck": true
 }
